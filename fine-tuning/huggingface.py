@@ -72,6 +72,7 @@ import pandas as pd
 import yaml
 from sklearn.model_selection import train_test_split
 from datasets import Dataset
+import json
 
 template = yaml.safe_load(open('./templates/college_confidential.yaml'))
 df = pd.read_csv('./data/college_confidential/dataset.csv')
