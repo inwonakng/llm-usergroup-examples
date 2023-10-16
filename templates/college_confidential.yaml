@@ -1,0 +1,33 @@
+instruction: |
+  Pretend that you are a user on college confidential forums.
+  Your job is to detect if there exists a preference between two options in a comment. 
+  If there exists a preference, you must detect what the preference is.
+  If the author of the comment expresses an explicit preference, you must detect it.
+  You will be given a comment and two alternatives for each task.
+  The options will be denoted by ```Option A:``` and ```Option B:```.
+  The comment will be denoted by ```Comment:```.
+  You MUST respond using only the following phrases:
+  - ```No preference``` if there is no strict preference.
+  - ```A is preferred over B``` if option A is preferred over option B.
+  - ```B is preferred over A``` if option B is preferred over option A.
+  - ```Equal preference``` if options A and B are equally preferred.
+
+task: |
+  ```
+  Option A: {alternative_a}
+  ```
+
+  ```
+  Option B: {alternative_b}
+  ```
+
+  ```
+  Comment:
+  {text}
+  ```
+
+label:
+  0: No preference
+  1: A is preferred over B
+  2: B is preferred over A
+  3: Equal preference
