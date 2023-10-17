@@ -53,7 +53,7 @@ training_arguments = TrainingArguments(
     optim='paged_adamw_32bit',
     save_steps=25,
     logging_steps=25,
-    learning_rate=2e-4,
+    learning_rate=1e-3,
     weight_decay=1e-3,
     fp16=False,
     bf16=False,
@@ -87,7 +87,7 @@ def wrap_task(alt_a, alt_b, text, label):
     ).replace(
         '{alternative_b}', alt_b
     ).replace(
-        'text', text
+        '{text}', text
     )
     prompt += '\n\n'
     prompt += '### Response:\n'
